@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Middleware\ThrottleRequests as Middleware;
 
-class Etag extends Middleware
+class EtagMiddleware extends Middleware
 {
     /**
      * @param  \Illuminate\Http\Request $request
