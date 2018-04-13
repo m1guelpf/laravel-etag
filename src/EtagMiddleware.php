@@ -16,7 +16,7 @@ class EtagMiddleware extends Middleware
      * @return mixed
      * @throws \Illuminate\Http\Exceptions\ThrottleRequestsException
      */
-    public function handle(Request $request, Closure $next, $maxAttempts = 60, $decayMinutes = 1)
+    public function handle($request, Closure $next, $maxAttempts = 60, $decayMinutes = 1)
     {
         if (! $request->isMethod('get')) {
             return parent::handle($request, $next, $maxAttemps, $decayMinutes);
