@@ -19,7 +19,7 @@ class EtagMiddleware extends Middleware
     public function handle($request, Closure $next, $maxAttempts = 60, $decayMinutes = 1)
     {
         if (! $request->isMethod('get')) {
-            return parent::handle($request, $next, $maxAttemps, $decayMinutes);
+            return parent::handle($request, $next, $maxAttempts, $decayMinutes);
         }
         
         $key = $this->resolveRequestSignature($request);
